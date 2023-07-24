@@ -1,0 +1,108 @@
+body {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #09131b;
+}
+
+.container .btn {
+  width: 150px;
+  height: 50px;
+  margin: 0 10px;
+}
+
+.container {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .btn a {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 400px;
+  z-index: 1;
+  transition: all 0.5s;
+  backdrop-filter: blur(15px);
+  box-shadow: 1px -130px 28px -96px rgba(0, 0, 0, 0.82),
+    -3px 128px 27px -96px rgba(0, 0, 0, 0.82);
+}
+
+.container .btn a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(25deg) translate(0);
+  transition: 0.5s;
+  filter: blur(0px);
+}
+
+.container .btn:hover a::before {
+  transform: skewX(45deg) translate(200px)
+}
+
+.container .btn:nth-child(1)::before {
+  transition: 5000ms;
+}
+
+.btn:nth-child(1):hover {
+  background-color: #777274;
+  border-radius: 80%;
+}
+
+.btn:nth-child(2):hover {
+  background-color: #919162;
+  border-radius: 80%;
+}
+
+.btn:nth-child(3):hover {
+  background-color: #812e4c;
+  border-radius: 80%;
+}
+
+.container .btn:nth-child(1) a:hover {
+  letter-spacing: 3px;
+  box-shadow: 0 0 5px #a9acb7,
+    0 0 15px #a9acb7,
+    0 0 30px #a9acb7,
+    0 0 60px #a9acb7;
+}
+
+.container .btn:nth-child(2) a:hover {
+  letter-spacing: 3px;
+  box-shadow: 0 0 5px #fafe0a,
+    0 0 15px #fafe0a,
+    0 0 30px #fafe0a,
+    0 0 60px #fafe0a;
+}
+
+
+.container .btn:nth-child(3) a:hover {
+  letter-spacing: 3px;
+  box-shadow: 0 0 5px #ff1f71,
+    0 0 15px #ff1f71,
+    0 0 30px #ff1f71,
+    0 0 60px #ff1f71;
+}
